@@ -99,3 +99,7 @@ let netArray = [];
 let netChangeSum = 0;
 let least = [''];
 let greatest = [''];
+
+//Used a loop to count each data point in the array. Console logged 86 data points/months
+for(let i = 0; i <= finances.length; i++);
+console.log(finances.length)
