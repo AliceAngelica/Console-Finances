@@ -1,3 +1,4 @@
+//data set 86 months
 var finances = [
 ['Jan-2010', 867884],
 ['Feb-2010', 984655],
@@ -86,3 +87,15 @@ var finances = [
 ['Jan-2017', 138230],
 ['Feb-2017', 671099]
 ];
+
+//Defined variables
+let average;
+let analysis;
+let months = finances.length;
+let total = 0;
+let change = 0;
+let net = 0;
+let netArray = [];
+let netChangeSum = 0;
+let least = [''];
+let greatest = [''];
