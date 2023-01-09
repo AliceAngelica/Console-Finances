@@ -10,7 +10,8 @@ The aim of the project was to analyse a set of financial data for a company. The
 
 In order to work out these calculations we first had to create various variables that would be used. Then we had find the number of months in the array of data by using a for-loop to count each string value in the first column. As the numerical data was in the second column, we had to create a second for-loop to access this columm in order to add all of the totals together. The net was subtracted from the total to get the change value. If statements were used to find the greatest and smallest increases in profits.
 
-![screenshot](../Console-Finances/images/screenshot.png)
+![screenshot](../Console-Finances/screenshot.png)
+<img src="..Console-Finances/screenshot.png" alt="screenshot of console and file"/>
 
 ## License
 
