@@ -97,9 +97,49 @@ let change = 0;
 let net = 0;
 let netArray = [];
 let netChangeSum = 0;
-let least = [''];
-let greatest = [''];
+let least = ['', 9999999999999];
+let greatest = ['', 0];
 
-//Used a loop to count each data point in the array. Console logged 86 data points/months
-for(let i = 0; i <= finances.length; i++);
-console.log(finances.length)
+
+
+  
+    for(let i = 0; i < finances.length; i++){ //Used a loop to count each data point in the array. Console logged 86 data points/months
+        for(let i2 = 0; i2 <finances[i].length; i2++ ){ //Used a Loop to access the numerical data in second column
+        
+            if(typeof finances[i][i2] !== 'string'){
+                total += finances[i][i2] //data is added together from each row
+                change = finances[i][i2] - net; //net is subtracted to get the change
+                net = finances[i][i2]; 
+                netArray.push(change);
+    
+                if(change > greatest[1]){
+                    greatest = [finances[i][0], finances[i][1]] //if statement for the greatest increases in profits
+                }
+    
+                if(change < least[1]){
+                    least = [finances[i][0], finances[i][1]] //if statement for the smallest increases in profits
+                }
+               
+    
+            }
+        }
+    }
+ 
+       
+for(let i = 0; i < netArray.length; i++){
+    netChangeSum += netArray[i]; //NetChangeSum = 671099 when logged to console
+}
+        
+average = Math.round((netChangeSum / finances.length) * 100) /100; //calculating the average change. Average = 7803.48
+
+//Analysis report
+analysis = `
+Financial Analysis
+--
+Total Months: ${months}
+Total: $ ${total}
+Average Change: ${average}
+Greatest Profit Increase: ${greatest[0]}: ${greatest[1]}
+Greatest Profit Decrease: ${least[0]}: ${least[1]}
+`
+console.log(analysis)
